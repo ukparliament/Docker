@@ -38,4 +38,4 @@ $StorageAccountPrimaryKey = $StorageAccountKeys[0].Value
 
 $AzureStorageContext = New-AzureStorageContext -StorageAccountName $StorageAccountName -StorageAccountKey $StorageAccountPrimaryKey
 
-Get-AzureStorageBlobContent -Context $AzureStorageContext -Blob $Blob -Container $Container -Destination $Destination/$Blob
+Get-AzureStorageBlobContent -Context $AzureStorageContext -Blob $Blob -Container $Container -Destination $Destination\$Blob
