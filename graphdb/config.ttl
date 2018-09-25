@@ -1,0 +1,33 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<#parliament> a rep:Repository;
+  rep:repositoryID "parliament";
+  rep:repositoryImpl [
+      rep:repositoryType "graphdb:FreeSailRepository";
+      <http://www.openrdf.org/config/repository/sail#sailImpl> [
+          <http://www.ontotext.com/trree/owlim#base-URL> "https://id.parliament.uk/";
+          <http://www.ontotext.com/trree/owlim#check-for-inconsistencies> "false";
+          <http://www.ontotext.com/trree/owlim#defaultNS> "http://www.w3.org/2002/07/owl#;https://www.w3.org/2000/01/rdf-schema#;http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+          <http://www.ontotext.com/trree/owlim#disable-sameAs> "false";
+          # Used for quads (context predicate subject object index)
+          <http://www.ontotext.com/trree/owlim#enable-context-index> "false";
+          <http://www.ontotext.com/trree/owlim#enable-literal-index> "true";
+          <http://www.ontotext.com/trree/owlim#enablePredicateList> "true";
+          <http://www.ontotext.com/trree/owlim#entity-id-size> "32";
+          <http://www.ontotext.com/trree/owlim#entity-index-size> "150000000";
+          <http://www.ontotext.com/trree/owlim#imports> "https://www.w3.org/2002/07/owl.ttl;https://www.w3.org/2000/01/rdf-schema.ttl;https://www.w3.org/1999/02/22-rdf-syntax-ns.ttl";
+          <http://www.ontotext.com/trree/owlim#in-memory-literal-properties> "true";
+          <http://www.ontotext.com/trree/owlim#query-limit-results> "0";
+          <http://www.ontotext.com/trree/owlim#query-timeout> "0";
+          <http://www.ontotext.com/trree/owlim#read-only> "false";
+          <http://www.ontotext.com/trree/owlim#repository-type> "file-repository";
+          <http://www.ontotext.com/trree/owlim#ruleset> "owl-max";
+          <http://www.ontotext.com/trree/owlim#storage-folder> "storage";
+          <http://www.ontotext.com/trree/owlim#throw-QueryEvaluationException-on-timeout> "false";
+          sail:sailType "graphdb:FreeSail"
+        ]
+    ];
+  rdfs:label "" .
