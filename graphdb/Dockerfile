@@ -18,7 +18,7 @@ RUN apk add --no-cache bash && \
     # Tune loadrdf
     #sed -i 's/com.ontotext.graphdb.loadrdf.LoadRDF/-Dpool.buffer.size=400000 -Dinfer.pool.size=4 com.ontotext.graphdb.loadrdf.LoadRDF/' /opt/graphdb/dist/bin/loadrdf && \
     # Download latest graph
-    wget -P /tmp/ -O backup.trig https://api.parliament.uk/download/latest && \
+    wget -O /tmp/backup.trig https://api.parliament.uk/download/latest && \
     # Restore repository
     /opt/graphdb/dist/bin/loadrdf -c /tmp/config.ttl -m parallel /tmp/backup.trig && \
     rm -rf /tmp/*
