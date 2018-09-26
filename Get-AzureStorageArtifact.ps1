@@ -19,9 +19,6 @@ Name of the blob in container.
 
 .PARAMETER Destination
 Destination path of the blob file.
-
-.NOTES
-This script is for use as a part of deployment in VSTS only.
 #>
 
 Param(
