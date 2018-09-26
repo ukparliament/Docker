@@ -1,3 +1,12 @@
+##########################################
+# UK Parliament graph running on GraphDB #
+##########################################
+
+# The image is updated daily with the latest ukparliament graph
+# docker run --rm -d -p 7200:7200 ukparliament/graphdb:latest
+
+# n.b. building the image requires you to download a version of GraphDB free to this folder
+
 # Use open jdk 8 alpine as base image
 FROM openjdk:8-alpine
 
